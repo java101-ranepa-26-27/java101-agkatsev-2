@@ -10,8 +10,10 @@ public class Main {
         Student student = new Student(name);
 
         // читаем оценки, пока не введут 0
-        for (int grade = scanner.nextInt(); grade != 0; grade = scanner.nextInt()) {
+        int grade = scanner.nextInt();
+        while (grade != 0) {
             student.addGrade(grade);
+            grade = scanner.nextInt();
         }
 
         student.printReport();
